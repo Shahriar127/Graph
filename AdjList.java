@@ -29,7 +29,6 @@ public class AdjList {
                 sb.append("\n");
             }
             return sb.toString();   
-
       }
 
       public static void main(String[] args){
