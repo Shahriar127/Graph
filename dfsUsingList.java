@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
 public class dfsUsingList {
 
     public class AdjList {
@@ -36,21 +37,28 @@ public class dfsUsingList {
         }
 
 
-        public void dfs(int n) {
-            boolean[] visits = new boolean[V];
-            dfsHelper(n, visits);
-            System.out.println();
-        }
+public void dfs(int n) {
+    boolean[] visits = new boolean[V];
+    Stack<Integer> stack = new Stack<>();
+    stack.push(n);
 
-        private void dfsHelper(int n, boolean[] visits) {
-            visits[n] = true;
-            System.out.print(n + " ");
-            for (int w : adj[n]) {
+    while (!stack.isEmpty()) {
+        int node = stack.pop();
+        if (!visits[node]) {
+            visits[node] = true;
+            System.out.print(node + " ");
+
+            // Push all adjacent unvisited nodes to the stack
+            for (int w : adj[node]) {
                 if (!visits[w]) {
-                    dfsHelper(w, visits);
+                    stack.push(w);
                 }
             }
         }
+    }
+    System.out.println();
+}
+
     }
 
     public static void main(String[] args) {
