@@ -2,7 +2,7 @@
 # Graph implementation in Java
 
 
-## [Graph (BFS,DFS).pdf](https://github.com/user-attachments/files/15937559/Graph.BFS.DFS.pdf)
+## Note PDF : [Graph (BFS,DFS).pdf](https://github.com/user-attachments/files/15937559/Graph.BFS.DFS.pdf)  (Click Here)
 
 
 This repository contains a comprehensive implementation of graph data structures and algorithms in Java. Specifically, it includes implementations of graphs using adjacency matrix and adjacency list representations, as well as depth-first search (DFS) and breadth-first search (BFS) algorithms.
